@@ -57,5 +57,5 @@ btnScrollTo.addEventListener('click', function(e){
 //   behavior:"smooth",
 //  })
 //New way to do it and shortest way
-section1.scrollIntoView({behavior:"smooth"})
+section1.scrollIntoView({behavior:"smooth"}) 
 })
