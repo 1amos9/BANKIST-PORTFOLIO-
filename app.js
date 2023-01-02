@@ -30,19 +30,3 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
-const message=document.createElement('div');
-message.classList.add('cookies-message');
-message.innerHTML ='we use cookies for improved functionality and performance. <button class="btn btn--close-cookies">Got it!</button>';
-header.append(message);
-message.style.backgroundColor='#37383d';
-message.style.width='105%';
-//message.style.height=Number.parseFloat(getComputedStyle(message.height)+40+px);
-message.style.textAlign='center';
-message.style.color='#ffff';
-document.querySelector('.btn--close-cookies').addEventListener('click', function(){
-  message.remove();
-})
-//changing a customized properties which was declared in the css file 
-//document.documentElement.style.setProperty('--color-primary','orangered');
-
- 
