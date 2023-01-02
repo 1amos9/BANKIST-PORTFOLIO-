@@ -59,3 +59,12 @@ btnScrollTo.addEventListener('click', function(e){
 //New way to do it and shortest way
 section1.scrollIntoView({behavior:"smooth"}) 
 })
+
+const h1=document.querySelector('h1');
+// h1.addEventListener('mouseenter', function(e){
+//   alert('you have attend the space');
+// })
+h1.onmouseenter=function(e){
+    alert('you have attend the space');
+  };
+  
