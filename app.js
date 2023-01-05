@@ -30,3 +30,41 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+const message=document.createElement('div');
+message.classList.add('cookie-message');
+message.innerHTML='we use cookies for improving functionality and performance. <button class="btn btn--close-cookies"> Got it!</button>';
+header.append(message);
+message.style.backgroundColor='#37383d';
+message.style.width='105%';
+document.querySelector('.btn--close-cookies').addEventListener('click',function(e) {
+  message.remove();
+});
+const btnscroll = document.querySelector('.btn--scroll-to');
+const section1=document.querySelector('#section--1');
+btnscroll.addEventListener('click',function(e) {
+ // const s1coords=section1.getBoundingClientRect();
+  //how to scroll the position
+ // window.scrollTo(s1coords.left+window.pageXOffset,s1coords.top+window.pageYOffset);
+ //old way to calculate the scroll position
+//  window.scrollTo({
+//   left:s1coords.left+window.pageXOffset,
+//   top:s1coords.top+window.pageYOffset,
+//   behavior:'smooth',
+// })
+//new way to scroll the position
+section1.scrollIntoView({behavior:'smooth'});
+})
+//const h1=document.querySelector('h1');
+//first way to use the mouse cursor behavior
+// h1.addEventListener('mouseenter',function(e) {
+//   alert('you have attend the space');
+// });
+//second way to use the mouse cursor behavior
+// setTimeout(h1.onmouseenter=function(e) {
+//   alert('you have attend the space');
+// },3000);
+const randomInt=(min,max)=>Math.floor(Math.random()*(max-min+1)+min);
+const randomColor=()=>`rgb(${randomInt(0,255)},${randomInt(0,255)},${randomInt(0,255)})`;
+document.querySelector('body').addEventListener('click',function(e) {
+  this.style.backgroundColor=randomColor();
+});
