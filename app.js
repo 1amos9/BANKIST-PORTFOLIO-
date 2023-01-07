@@ -68,3 +68,10 @@ const randomColor=()=>`rgb(${randomInt(0,255)},${randomInt(0,255)},${randomInt(0
 document.querySelector('body').addEventListener('click',function(e) {
   this.style.backgroundColor=randomColor();
 });
+document.querySelectorAll('.nav__link').forEach(function(el){
+  el.addEventListener('click',function(e){
+    e.preventDefault();
+    const id=this.getAttribute('href');
+    document.querySelector(id).scrollIntoView({behavior:'smooth'});
+  });
+})
