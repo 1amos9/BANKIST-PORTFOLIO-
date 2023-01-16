@@ -139,3 +139,13 @@ allSections.forEach(function(section){
   sectionObserver.observe(section);
   section.classList.add('section--hidden')
 })
+const imgTarget=document.querySelectorAll('img[data-src]');
+const loadImg=function(entries, observer){
+const [entry]=entries;
+
+}
+const imgOberserver=new IntersectionObserver(loadImg,{
+root: null,
+threshold:0,
+})
+imgTarget.forEach(img=>imgOberserver.observe(img));
