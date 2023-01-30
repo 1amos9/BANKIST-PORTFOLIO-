@@ -34,14 +34,15 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
-const message=document.createElement('div');
-message.classList.add('cookie-message');
-message.innerHTML='we use cookies for improving functionality and performance. <button class="btn btn--close-cookies"> Got it!</button>';
-header.append(message);
-// message.style.position='fixed';
-document.querySelector('.btn--close-cookies').addEventListener('click',function(e) {
-  message.remove();
-});
+// const message=document.createElement('div');
+// message.classList.add('cookie-message');
+// message.innerHTML='we use cookies for improving functionality and performance. <button class="btn btn--close-cookies"> Got it!</button>';
+// header.append(message);
+// // message.style.position='fixed';
+// document.querySelector('.btn--close-cookies').addEventListener('click',function(e) {
+//   message.remove();
+// });
+
 
 btnscroll.addEventListener('click',function(e) {
  // const s1coords=section1.getBoundingClientRect();
